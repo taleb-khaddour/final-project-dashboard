@@ -8,7 +8,7 @@ import { MdDelete } from 'react-icons/md'
 import EditMenu from './editMenu/index'
 import Swal from 'sweetalert2'
 import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css'
 // import logo from "../../../public/Assets/Logo-final.png"
 
 import AddMenu from './addMenu'
@@ -68,7 +68,6 @@ export default function Menu() {
     iconAdd ? isShowIconAdd(false) : isShowIconAdd(true)
   }
 
-  
   const options = {
     filterType: 'checkbox',
     responsive: 'simple',
@@ -106,6 +105,18 @@ export default function Menu() {
     {
       name: 'image',
       label: 'Picture',
+      options: {
+        customBodyRender: (data) => {
+          return (
+            <>
+              <img
+                src={data}
+                style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '150px' }}
+              />
+            </>
+          )
+        },
+      },
     },
     {
       name: 'price',
@@ -176,20 +187,19 @@ export default function Menu() {
                         )
                         .then((response) => {
                           Swal.fire({
-                            
                             icon: 'success',
                             title: 'Your data has been deleted',
                             showConfirmButton: false,
-                            timer: 1500
+                            timer: 1500,
                           })
                           // window.location.reload()
                         })
                         .catch((err) => {
-                          Swal.fire({                        
+                          Swal.fire({
                             icon: 'error',
                             title: 'Your data not deleted deleted',
                             showConfirmButton: false,
-                            timer: 1500
+                            timer: 1500,
                           })
                           console.log(err)
                         })
@@ -213,7 +223,7 @@ export default function Menu() {
         console.log(response.data)
         setData(response.data)
         setFormPopUp(false)
-      
+
         isShowEdit(false)
       })
       .catch((err) => {
@@ -267,14 +277,12 @@ export default function Menu() {
   if (!Data) return 'wait'
   return (
     <div className="incomss">
-     
-      {visibleEdit && <EditMenu allData={DataById} getData={getData} showEdit={showEdit} />}
+      {visibleEdit && (
+        <EditMenu allData={DataById} getData={getData} showEdit={showEdit} />
+      )}
 
       <div className="income_table">
         <div className="table_mui">
-
-          
-          
           <MUIDataTable
             columns={columns}
             data={Data}

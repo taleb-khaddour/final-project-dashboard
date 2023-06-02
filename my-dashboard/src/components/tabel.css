@@ -1,12 +1,12 @@
 .income_table{
     display: flex;
-    height: 598px;
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    overflow-x: hidden;
+    min-height: 97vh;
 }
 .table_mui{
+    margin: auto;
     margin-left: 40px;
     margin-right: 40px;
 }
