@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
+import React from 'react'
+import Sidebar from '../Sidebar/nav'
 
-
-function dashboard() {
-
+const dashboard = () => {
   return (
-    <div>
-      
-    </div>
+    <div><Sidebar /></div>
   )
 }
 

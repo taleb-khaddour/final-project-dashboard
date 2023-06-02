@@ -50,12 +50,6 @@ function Sidebar(props) {
         </div>
 
         <div className={classes.bar}>
-          <NavLink to={"/dashboard"}>
-            <RxDashboard className={classes.icons} size={25} />
-            {/* <b></b>
-            <u></u> */}
-            <span>Dashboard</span>
-          </NavLink>
           <NavLink to={"/menu"}>
             <MdOutlineClass className={classes.icons} size={25} />
             {/* <b></b>
