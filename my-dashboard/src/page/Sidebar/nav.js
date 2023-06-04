@@ -55,18 +55,13 @@ function Sidebar(props) {
             <u></u> */}
             <span>Menu</span>
           </NavLink>
-          <NavLink to={'/contact'}>
+          <NavLink to={'/category'}>
             <HiTableCells className={classes.icons} size={25} />
             {/* <b></b>
             <u></u> */}
-            <span>Contact</span>
+            <span>Category</span>
           </NavLink>
-          <NavLink to={'/flavour'}>
-            <BiUser className={classes.icons} size={25} />
-            {/* <b></b>
-            <u></u> */}
-            <span>flavour</span>
-          </NavLink>
+        
           <NavLink to={'/contact'}>
             <FaUserCheck className={classes.icons} size={25} />
             {/* <b></b>
@@ -74,12 +69,7 @@ function Sidebar(props) {
             <span>Contact</span>
           </NavLink>
 
-          <NavLink to={'/admin'}>
-            <FaUserTie className={classes.icons} size={25} />
-            {/* <b></b>
-              <u></u> */}
-            <span>Admins</span>
-          </NavLink>
+         
         </div>
 
         <div className={classes.setting}>

@@ -68,7 +68,7 @@ const Login = () => {
       setCookie("auth", response.data.token);
       setLoggedIn(true);
       localStorage.setItem("token", token);
-      navigate("/dashboard");
+      navigate("/menu");
 
       toast.success("Login successful!");
 
