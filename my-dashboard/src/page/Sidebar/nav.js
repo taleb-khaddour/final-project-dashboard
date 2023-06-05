@@ -10,7 +10,7 @@ import { MdOutlineClass } from 'react-icons/md'
 import { RxDashboard } from 'react-icons/rx'
 import { HiTableCells } from 'react-icons/hi2'
 import { BiUser } from 'react-icons/bi'
-import { FaUserCheck, FaUserTie } from 'react-icons/fa'
+import { FaCreativeCommons, FaList, FaMailBulk, FaProductHunt, FaQuestion, FaUserCheck, FaUserTie } from 'react-icons/fa'
 import { HiOutlineLogout } from 'react-icons/hi'
 
 function Sidebar(props) {
@@ -50,23 +50,29 @@ function Sidebar(props) {
 
         <div className={classes.bar}>
           <NavLink to={'/menu'}>
-            <MdOutlineClass className={classes.icons} size={25} />
+            <FaList className={classes.icons} size={25} />
             {/* <b></b>
             <u></u> */}
             <span>Menu</span>
           </NavLink>
           <NavLink to={'/category'}>
-            <HiTableCells className={classes.icons} size={25} />
+            <MdOutlineClass className={classes.icons} size={25} />
             {/* <b></b>
             <u></u> */}
             <span>Category</span>
           </NavLink>
         
           <NavLink to={'/contact'}>
-            <FaUserCheck className={classes.icons} size={25} />
+            <FaMailBulk className={classes.icons} size={25} />
             {/* <b></b>
             <u></u> */}
             <span>Contact</span>
+          </NavLink>
+          <NavLink to={'/suggestion'}>
+            <FaQuestion className={classes.icons} size={25} />
+            {/* <b></b>
+            <u></u> */}
+            <span>Suggestion</span>
           </NavLink>
 
          

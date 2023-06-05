@@ -9,10 +9,13 @@ import EditMenu from './editMenu/index'
 import Swal from 'sweetalert2'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Loding from "../loading/loading.js";
+
 // import logo from "../../../public/Assets/Logo-final.png"
 
 import AddMenu from './addMenu'
 import { Navigate } from 'react-router-dom'
+import { Box } from '@mui/material'
 
 export default function Menu() {
   const [Type, setType] = useState('')
@@ -274,7 +277,16 @@ export default function Menu() {
     setFormPopUp(!formPopUp)
   }
 
-  if (!Data) return 'wait'
+  if (!Data) return  <Box
+  sx={{
+    width: "100%",
+    height: "70vh",
+    display: "grid",
+    placeItems: "center",
+  }}
+>
+  <Loding />
+</Box>
   return (
     <div className="incomss">
       {visibleEdit && (

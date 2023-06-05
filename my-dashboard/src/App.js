@@ -10,6 +10,7 @@ import Menu from '../src/components/menu/menu.js'
 import Container from './page/container/container.js'
 import Category from "./components/category/category.js";
 import Contact from "./components/contact/contact.js";
+import Suggestion from "./components/suggestion/suggestion.js"
 
 function App() {
   const [token, setToken] = useState(null)
@@ -36,6 +37,7 @@ function App() {
               <Route path="/category" element={<Category />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/suggestion" element={<Suggestion />} />
             </Route>
           </Route>
         )}
